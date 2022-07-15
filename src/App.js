@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import './Hearder'; 
-import './formulario';
+import './Components/Hearder'; 
+import './Components/formulario';
+import './App.css';
+import TareaForm from './Components/formulario';
+
 
 function App() {
   return (
     <div>
-      <header className="ListTaks">
+      <header >
       <titulo> <h2> Lista de tareas </h2> </titulo>
-
-
-
       </header>
-        <p>
-          <tarea>
-              
-          </tarea>
-        </p>
-       
+      <div></div>
      
     </div>
   );
