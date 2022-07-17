@@ -1,18 +1,4 @@
-import React, { UseState, UseEffect } from "react";
-
-const formulario = (promp) => {
-   const [InputText, SetInputText] = UseState("");
-
-   const manejartarea = (Event) => {
-    SetInputText(Event.target.velue);
-    console.log (InputText)
-   }
-
-
-    return (    
-        <div>
-            <span> Añadir tarea </span>
-            <form className="tarea">
+ <form className="tarea">
                 <span> Añadir tarea 1° </span>
                 <input placeholder=" Ingresa aqui la tarea" type="checkbox">   </input> 
                  <br></br>
@@ -38,10 +24,3 @@ const formulario = (promp) => {
                 <input placeholder=" Ingresa aqui la tarea" type="checkbox">   </input>
 
             </form>
-            <input> </input>
-            <button></button>
-        </div> 
-    )
-}
-
-export default formulario

@@ -1,10 +1,10 @@
 import React from "react";
 
-function Header ({titulo}){
+function Header ({Titulo}){
      return( 
      <div>
          <h1>
-            <a href='#!' className="brand-logo">{titulo}</a>
+            <a href='#!' className="brand-logo">{Titulo}</a>
          </h1>
      </div>
 )
