@@ -1,20 +1,19 @@
 import './App.css';
 import './Components/Hearder'; 
-import './Components/formulario';
+import './Components/Formulario';
 import './App.css';
+import Formulario from './Components/Formulario';
+import Header from './Components/Hearder';
 
 
 
 function App() {
   return (
     <div>
-   
       
-    
-    <formulario>
-      
-    </formulario>
-      
+   <Header Titulo={"Mi aplicacion"}/>
+
+    <Formulario></Formulario>
      
     </div>
   );

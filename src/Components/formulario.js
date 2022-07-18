@@ -1,6 +1,6 @@
 import React, { UseState, UseEffect } from "react";
 
-const formulario = (promp) => {
+const Formulario = (promp) => {
    const [InputText, SetInputText] = UseState("");
 
    const manejartarea = (Event) => {
@@ -44,4 +44,4 @@ const formulario = (promp) => {
     )
 }
 
-export default formulario
+export default Formulario
