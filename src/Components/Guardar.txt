@@ -24,3 +24,5 @@
                 <input placeholder=" Ingresa aqui la tarea" type="checkbox">   </input>
 
             </form>
+
+             value ={InputText} onChange={ManejarTarea} placeholder = {"Añadir tarea"}
