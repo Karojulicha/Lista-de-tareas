@@ -1,22 +1,31 @@
 import React, {useState} from "react";
+import { Button, } from '@chakra-ui/react'
+import OtherComponent from './OtherComponent';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
 const Formulario = (promp) => {
 
     
-    const [InputText, SetInputText] = useState("");
+    const [Text, SetText] = useState("");
+     
+    
+   const ManejarTarea = (e) => SetText(e.target.value);
 
-   const ManejarTarea = (Event) => {
-    SetInputText(Event.target.velue);
-    console.log (InputText) }
+
+    const EnviarDatos = (e) => {
+        e.preventDefault();
+        
+    }
 
     return (    
         <div>
             
-            <form className="tarea">
+            <form onSubmit={EnviarDatos} >
                 <span> Añade tarea: </span>
-                <input placeholder = {"Agrega nueva tarea"}  value ={InputText} onChange={ManejarTarea} ></input>
+                <input  type="text" placeholder = {"Agrega nueva tarea"}  value ={Text} onChange={ManejarTarea} ></input>
             </form>
-            <button>Agregar a lista</button>
+            <Button type="Submit">Agregar a lista</Button>
         </div> 
     )
 }

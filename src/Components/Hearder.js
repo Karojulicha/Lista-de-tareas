@@ -1,4 +1,7 @@
 import React from "react";
+import OtherComponent from './OtherComponent';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
 
 function Header ({Titulo}){

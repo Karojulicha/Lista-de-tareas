@@ -1,25 +1,26 @@
 import React, {} from "react";
+import OtherComponent from './OtherComponent';
 
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
 const TareaEstatic =(promp) => {
+
 
     return(
 
        [
-        <form>  
 
-        <span>  1. Realizar actividades de disruptia </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 2. Realizar actividades del Tecnologo </span> <button> Completada </button> <button> Pendiente </button> <br/>  
-        <span> 3. Realizar registro de horario universidad </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 4. Sacar citas medicas </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 5. Organizar horarios </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 6. </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 7. </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 8. </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 9. </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        <span> 10. </span> <button> Completada </button> <button> Pendiente </button> <br/>
-        
-        </form>
+        <div>
+            <label>
+                  <span> 1. Realizar actividades del Tecnologo </span> <input type="checkbox" ></input>
+                  <span> 2. Realizar edicion de video </span> <input type="checkbox" ></input>
+                  <span> 3. Realizar actividades de Disruptia </span> <input type="checkbox" ></input>
+                  <span> 4. Ir a las clases de la universidad </span> <input type="checkbox" ></input>
+                  <span> 5. realizar actividad fisica de vez en cuando </span> <input type="checkbox" ></input>
+      
+            </label>
+        </div>
+      
 
     ] 
 

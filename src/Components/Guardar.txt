@@ -26,3 +26,37 @@
             </form>
 
              value ={InputText} onChange={ManejarTarea} placeholder = {"Añadir tarea"}
+
+             
+        <span>  1. Realizar actividades de disruptia </span><input type="checkbox"></input>  <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 2. Realizar actividades del Tecnologo </span> <input type="checkbox"></input> <button> Completada </button> <button> Pendiente </button> <br/>  
+        <span> 3. Realizar registro de horario universidad </span><input type="checkbox"></input>  <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 4. Sacar citas medicas </span><input type="checkbox"></input>  <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 5. Organizar horarios </span><input type="checkbox"></input>  <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 6. </span> <input type="Checkbox"></input>  <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 7. </span><input type="checkbox"></input>  <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 8. </span> <input type="checkbox"></input> <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 9. </span> <input type="checkbox"> </input> <button> Completada </button> <button> Pendiente </button> <br/>
+        <span> 10. </span> <input type="checkbox"></input> <button> Completada </button> <button> Pendiente </button> <br/>
+        
+
+        onChange={(e) => {
+console.log(“bla”);
+function Checkbox() { 
+  
+  const handleChange = () => { 
+    
+    console.log('The checkbox was toggled'); 
+    
+  }; 
+  
+  return ( 
+    
+    <div>  <input type="checkbox" onChange={handleChange}> </div> 
+    
+  ); 
+  
+}; 
+
+export {Checkbox};
+http://react.tips/checkboxes-in-react/
