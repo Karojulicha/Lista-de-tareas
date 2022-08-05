@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import { Button, } from '@chakra-ui/react'
 import OtherComponent from './OtherComponent';
-
-const OtherComponent = React.lazy(() => import('./OtherComponent'));
+const OtherComponent = React.lazy(() => import('./Components/Formulario'));
 
 const Formulario = (promp) => {
 
