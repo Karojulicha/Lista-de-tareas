@@ -1,15 +1,24 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 //import ReactDOM from "react-dom/client";
 //import { BrowserRouter } from "react-router-dom";
-import './App.css';
 import Formulario from './Components/Formulario';
 import Header from './Components/Hearder';
 import TareaEstatic from './Components/TareasEstatic';
-import OtherComponent from './Components/Formulario';
-const OtherComponent = React.lazy(() => import('.Components/Formulario'));
+
 
 
 function App() {
+  const [ListaTareas, setListaTareas]= useState([])
+ 
+  const NuevaTarea = (tarea)=> {
+    setListaTareas(tarea,...ListaTareas)
+  }
+
+  const [ListaNota, setListaNota]= useState([])
+
+  const NuevaNota = (Nota)=>{ 
+    setListaNota (Nota, ...ListaNota)
+  }
   return (
     <Suspense fallback={<h1>"Loading..."</h1>}>
   
@@ -17,16 +26,13 @@ function App() {
        
    <Header Titulo={"Mi lista de tareas"}/>
  
-   <Formulario></Formulario>
+   <Formulario>
+    NuevaTarea={NuevaTarea}
+    NuevaNota= {NuevaNota}
+   </Formulario>
 
    <TareaEstatic></TareaEstatic>
       </div>
     </Suspense>
   );
-}
-
-
-
-
-
-export default App;
+} export default App;

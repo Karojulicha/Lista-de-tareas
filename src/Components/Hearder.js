@@ -1,10 +1,10 @@
 import React from "react";
-import OtherComponent from './OtherComponent';
+import { } from '@chakra-ui/react';
 
-const OtherComponent = React.lazy(() => import('./Components/Hearder'));
 
 
 function Header ({Titulo}){
+
      return( 
      <div>
          <h1>

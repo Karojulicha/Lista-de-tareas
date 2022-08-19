@@ -1,32 +1,43 @@
 import React, {useState} from "react";
-import { Button, } from '@chakra-ui/react'
-import OtherComponent from './OtherComponent';
-const OtherComponent = React.lazy(() => import('./Components/Formulario'));
+import { Button, FormControl, Input } from '@chakra-ui/react'
 
-const Formulario = (promp) => {
+const Formulario = (props) => {
+     const [Text, setText] = useState("");
+     const [valida, setValida] = useState(true);
+     const ManejarTarea = (event) => {setText(event.target.value); }
 
-    
-    const [Text, SetText] = useState("");
      
-    
-   const ManejarTarea = (e) => SetText(e.target.value);
+     const [ Info, setInfo ] = useState("");
+     const ManejarNota = (event) => { setInfo (event.target.value)};
 
+    const EnviarDatos = (event) => {
+        event.preventDefault();
+        if(Text.trim() !== ""  ){
+            props.NuevaTarea (Text);
+            setText("");
+            setValida(true)
+        } else {
+            setValida(false);
+        }
 
-    const EnviarDatos = (e) => {
-        e.preventDefault();
-        
-    }
+     const EnviarDatos = (event) => {
+        event.preventDefault();
+        props.NuevaNota (Info);
+     }   
+    };
 
     return (    
         <div>
-            
-            <form onSubmit={EnviarDatos} >
+
+            <FormControl isRequired onSubmit={EnviarDatos} >
                 <span> Añade tarea: </span>
-                <input  type="text" placeholder = {"Agrega nueva tarea"}  value ={Text} onChange={ManejarTarea} ></input>
-            </form>
+                <Input type='text' placeholder = {"Nombre de la tarea"} value={Info} onChange ={ManejarNota} minlength ="3" required></Input>
+                <Input  type="text" placeholder = {"Descripción"}  value ={Text} onChange={ManejarTarea}></Input>
+            </FormControl>
             <Button type="Submit">Agregar a lista</Button>
+            {!valida && <div className=" validar">Añade tarea</div>}
         </div> 
     )
 }
 
-export default Formulario
+export default Formulario;

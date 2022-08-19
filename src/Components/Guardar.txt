@@ -60,3 +60,9 @@ function Checkbox() {
 
 export {Checkbox};
 http://react.tips/checkboxes-in-react/
+
+     1. Realizar actividades del Tecnologo 
+                  2. Realizar edicion de video 
+                  3. Realizar actividades de Disruptia    
+                  4. Ir a las clases de la universidad 
+                  5. realizar actividad fisica de vez en cuando 
